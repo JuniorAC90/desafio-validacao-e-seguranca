@@ -1,7 +1,6 @@
 package com.devsuperior.bds04.controller;
 
 import com.devsuperior.bds04.dto.CityDTO;
-import com.devsuperior.bds04.entities.City;
 import com.devsuperior.bds04.services.CityService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
