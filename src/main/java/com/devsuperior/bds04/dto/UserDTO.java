@@ -9,23 +9,20 @@ public class UserDTO {
 
     private Long id;
     private String email;
-    private String password;
 
     Set<RoleDTO> roles = new HashSet<>();
 
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String email, String password) {
+    public UserDTO(Long id, String email) {
         this.id = id;
         this.email = email;
-        this.password = password;
     }
 
     public UserDTO(User entity) {
         id = entity.getId();
         email = entity.getEmail();
-        password = entity.getPassword();
         entity.getRoles().forEach(role -> roles.add(new RoleDTO(role)));
     }
 
@@ -43,14 +40,6 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Set<RoleDTO> getRoles() {
